@@ -1,0 +1,9 @@
+#1) Imports
+from math import sin, cos, pi, sqrt, tan, atan2
+#2) Sequência
+n=0
+C=1
+while C <= 1000:
+  print(C)
+  C= C*((4*n)+2)//(n+2)
+  n+=1
