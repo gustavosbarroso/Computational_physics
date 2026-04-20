@@ -1,0 +1,22 @@
+#1) Imports
+from math import sin, cos, pi, sqrt, tan, atan2
+#2) Constantes
+m=9.11 * 10**-31 #kg
+h=6.63 * 10**-34 # J * s
+e=1.6 * 10**-19 # C
+hbar=h/(2*pi)
+#3) Entradas (em eV)
+E=float(input("E=")) #eV
+V=float (input("V=")) #eV
+#Conversão para J
+E=E* e
+V=V*e
+#4) k1 e k2
+k1=sqrt(2*m*E)/hbar
+k2=sqrt(2*m* (E - V))/hbar
+#5) T e R
+T=(4*k1*k2)/((k1+k2)**2)
+R=(k1-k2)**2/((k1+k2)**2)
+#6) Impressão dos resultados
+print("T=", T)
+print("R", R)
